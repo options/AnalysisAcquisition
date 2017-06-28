@@ -4,7 +4,7 @@ This project implements the system for Analysis on the acquisition process. spec
 
 It also includes a few of sample implementations for understanding system architecture and using plenty of azure services. 
 
-The overall system architecture is based on reactive & serverless architecture to minimize cost and managagement labors. and it also utilize bot technilogy to supports various channel to ingest acquisition information.
+The overall system architecture is based on reactive & serverless architecture to minimize cost and managagement labors. and it also utilize bot technology to support various channels to ingest acquisition information.
 
 # System Architecture
 
