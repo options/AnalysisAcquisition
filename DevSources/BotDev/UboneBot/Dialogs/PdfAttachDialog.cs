@@ -57,11 +57,13 @@ namespace UboneBot.Dialogs
                         fileName = string.Format("{0}-{1}", fileName, Guid.NewGuid().ToString());
                     }
 
+                    await context.PostAsync("문서를 업로드 하고 있습니다...");
+
                     Utils.Upload2ASS up = new Utils.Upload2ASS();
                     Uri fileUri = up.UploadFilesToAzureStorage(fileName, contentStream);
 
-                    await context.PostAsync("문서가 업로드 되었습니다. 이제 곧 Cognitive 분석이 시작됩니다...");
-                    await context.PostAsync("분석이 끝나면 메일로 결과를 알려 드립니다.");
+                    await context.PostAsync("업로드가 완료 되었습니다. \n" +
+                        "이제 곧 Cognitive 분석이 시작되며, 분석이 끝나면 메일로 결과를 알려 드립니다.");
 
                     context.Done(0);
                     //await context.PostAsync($"Attachment of {attachment.ContentType} type and size of {contentLenghtBytes} bytes received.");
@@ -73,10 +75,7 @@ namespace UboneBot.Dialogs
                 context.Done(0);
             }
 
-            context.Wait(this.MessageReceivedAsync);
-        }
-
-
-        
+            context.Done(0);
+        }    
     }
 }

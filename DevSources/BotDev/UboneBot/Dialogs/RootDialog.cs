@@ -14,17 +14,13 @@ namespace UboneBot.Dialogs
 
         public async Task StartAsync(IDialogContext context)
         {
-            await context.PostAsync("안녕하세요? UBONE의 문서 접수 Bot입니다");
+            await context.PostAsync("안녕하세요? UBONE의 문서 접수 Bot입니다\n문서를 등록하시겠습니까?");
             context.Wait(MessageReceivedAsync);
         }
 
         private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<object> result)
         {
-            this.ShowOptions(context);
-        }
-
-        private void ShowOptions(IDialogContext context)
-        {
+            //this.ShowOptions(context);
             PromptDialog.Choice(context, this.OnOptionSelected, new List<string>() { PDFAttachOption, DOCAttachOption }, @"어떤 문서를 등록하시겠습니까?", "선택해 주세요", 3);
         }
 
