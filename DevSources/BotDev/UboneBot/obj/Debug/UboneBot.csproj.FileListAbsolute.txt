@@ -1,0 +1,40 @@
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Bot Application.dll.config
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Bot Application.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Bot Application.pdb
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Autofac.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Chronic.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Microsoft.Bot.Builder.Autofac.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Microsoft.Bot.Builder.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Microsoft.Bot.Connector.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Microsoft.Rest.ClientRuntime.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Newtonsoft.Json.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\System.Net.Http.Formatting.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\System.Web.Http.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\System.Web.Http.WebHost.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Autofac.xml
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Microsoft.Bot.Builder.xml
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Microsoft.Bot.Builder.Autofac.xml
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Microsoft.Bot.Connector.xml
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\Newtonsoft.Json.xml
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\System.Net.Http.Formatting.xml
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\System.Web.Http.xml
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\System.Web.Http.WebHost.xml
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\ar\Microsoft.Bot.Builder.resources.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\cs\Microsoft.Bot.Builder.resources.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\de-dE\Microsoft.Bot.Builder.resources.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\en\Microsoft.Bot.Builder.resources.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\es\Microsoft.Bot.Builder.resources.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\fa\Microsoft.Bot.Builder.resources.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\fr\Microsoft.Bot.Builder.resources.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\ja\Microsoft.Bot.Builder.resources.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\ru\Microsoft.Bot.Builder.resources.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\obj\Debug\UboneBot.csprojResolveAssemblyReference.cache
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\obj\Debug\Bot Application.dll
+C:\GitHub\AnalysisAcquisition\DevSources\BotDev\UboneBot\obj\Debug\Bot Application.pdb
