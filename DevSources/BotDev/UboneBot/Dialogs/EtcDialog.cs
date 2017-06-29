@@ -14,7 +14,9 @@ namespace UboneBot.Dialogs
     {
         public async Task StartAsync(IDialogContext context)
         {
-            context.Fail(new NotImplementedException("아직 기능이 구현되지 않았습니다."));
+            //context.Fail(new NotImplementedException("아직 기능이 구현되지 않았습니다."));
+            await context.PostAsync("아직 기능이 구현되지 않았습니다. 현재는 PDF만 가능합니다.");
+            context.Done(0);
         }
     }
 }
