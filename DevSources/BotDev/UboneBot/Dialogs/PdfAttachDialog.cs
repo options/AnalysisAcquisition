@@ -47,11 +47,15 @@ namespace UboneBot.Dialogs
                     // 2. 이미지를 BLOB에 저장
                     // 랜덤 이름을 만들어서 Azure Storage에 저장하기
                     string fileName = attachment.Name;
-
-                    Random random = new Random();
-                    int randomNumber = random.Next(100000, 1000000);
-                    Guid guid = Guid.NewGuid(); 
-                    fileName = string.Format("{0}-{1}", fileName, guid.ToString());
+                    if(fileName.IndexOf('.') > -1)
+                    {
+                        string[] fs = fileName.Split(new char[]{'.'});
+                        fileName = string.Format("{0}-{1}.{2}", fs[0], Guid.NewGuid().ToString(), fs[1]);
+                    }
+                    else
+                    {
+                        fileName = string.Format("{0}-{1}", fileName, Guid.NewGuid().ToString());
+                    }
 
                     Utils.Upload2ASS up = new Utils.Upload2ASS();
                     Uri fileUri = up.UploadFilesToAzureStorage(fileName, contentStream);
