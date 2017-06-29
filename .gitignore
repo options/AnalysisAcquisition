@@ -253,3 +253,6 @@ paket-files/
 .idea/
 *.sln.iml
 *.suo
+*.csproj
+DevSources/BotDev/UboneBot/UboneBot.csproj.user
+*.user
