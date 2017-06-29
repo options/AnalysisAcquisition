@@ -10,7 +10,7 @@
     {
       "type": "blob",
       "name": "$return",
-      "path": "textblob/{rand-guid}",
+      "path": "textblob/{name}.txt",
       "connection": "AzureWebJobsDashboard",
       "direction": "out"
     }
