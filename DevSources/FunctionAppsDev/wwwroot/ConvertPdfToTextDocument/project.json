@@ -1,0 +1,11 @@
+{
+  "frameworks": {
+    "net46":{
+      "dependencies": {
+        "iTextSharp": "5.5.11",
+        "Microsoft.ProjectOxford.Vision": "1.0.393",
+        "Newtonsoft.Json": "8.0.2"
+      }
+    }
+   }
+}

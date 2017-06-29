@@ -1,0 +1,12 @@
+{
+  "bindings": [
+    {
+      "name": "zippedblob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "zippedblob/{name}",
+      "connection": "AzureWebJobsDashboard"
+    }
+  ],
+  "disabled": false
+}
