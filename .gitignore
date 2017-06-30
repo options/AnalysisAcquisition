@@ -258,3 +258,5 @@ DevSources/BotDev/UboneBot/UboneBot.csproj.user
 *.user
 *.sln
 *.sln
+
+**/dist/*
