@@ -4,7 +4,7 @@ Repositories for Analysis on the Acquisition Process Hackfest
 
 ## [Angular Front-end Dev](AngularWebDev/)
 
-- Sources for Web front-end UI that communicate with [Microsoft Bot App](https://dev.botframework.com/)
+- Source codes for Web front-end UI that communicate with [Microsoft Bot App](https://dev.botframework.com/)
 - deveploed with modern web-techs like Angular 4, [TypeScript](https://www.typescriptlang.org/), Angular CLI, Bootstrap, etc.
 - included Power BI Embedded UI for analysis report
 - also included Web Chat Bot and Skype Web Chat Bot for communicating with Bot app
@@ -14,7 +14,7 @@ Repositories for Analysis on the Acquisition Process Hackfest
 
 ## [Bot Dev](BotDev/)
 
-- Sources for Bot app(UBone Bot)
+- Source code for Bot app(UBone Bot)
 - developed with [Microsoft Bot framework](https://dev.botframework.com/) using C#, ASP.NET
 - used multi-dialogs for conversation flow
 - User can send/upload a document file(PDF only now) to Bot for asking analysis
