@@ -1,0 +1,63 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "accounts_SpellCheck_API_name": {
+            "value": null
+        },
+        "accounts_Vision_API_name": {
+            "value": null
+        },
+        "alertrules_Failure_Anomalies___analysisfunctions_name": {
+            "value": null
+        },
+        "components_analysisfunctions_name": {
+            "value": null
+        },
+        "workflows_EmailNotifier_name": {
+            "value": null
+        },
+        "servers_analysisacqserver_name": {
+            "value": null
+        },
+        "storageAccounts_acqstorage_name": {
+            "value": null
+        },
+        "serverfarms_SoutheastAsiaPlan_name": {
+            "value": null
+        },
+        "serverfarms_web_basicplan_name": {
+            "value": null
+        },
+        "sites_ubone_webbot_name": {
+            "value": null
+        },
+        "sites_analysisfunctions_name": {
+            "value": null
+        },
+        "databases_analysisAcquitionDB_name": {
+            "value": null
+        },
+        "databases_master_name": {
+            "value": null
+        },
+        "firewallRules_AllowAllWindowsAzureIps_name": {
+            "value": null
+        },
+        "firewallRules_Microsoft_Office_name": {
+            "value": null
+        },
+        "firewallRules_uboneClient_name": {
+            "value": null
+        },
+        "config_web_name": {
+            "value": null
+        },
+        "config_web_name_1": {
+            "value": null
+        },
+        "workflows_EmailNotifier_connectionId": {
+            "value": null
+        }
+    }
+}
