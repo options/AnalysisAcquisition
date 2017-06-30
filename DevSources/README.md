@@ -9,10 +9,10 @@ Repositories for Analysis on the Acquisition Process Hackfest
 - included Power BI Embedded UI for analysis report
 - also included Web Chat Bot and Skype Web Chat Bot for communicating with Bot app
 
-## [Azure Resource Group Dev](/AzureResourceGroupDev)
+## [Azure Resource Group Dev](AzureResourceGroupDev/)
 - 
 
-## [Bot Dev](/BotDev)
+## [Bot Dev](BotDev/)
 
 - Sources for Bot app(UBone Bot)
 - developed with [Microsoft Bot framework](https://dev.botframework.com/) using C#, ASP.NET
@@ -20,16 +20,16 @@ Repositories for Analysis on the Acquisition Process Hackfest
 - User can send/upload a document file(PDF only now) to Bot for asking analysis
 - Bot simply rename it for preventing file-name duplicattion and forward it to Azure Blob storage for following analysis process
 
-## [Function Apps Dev](/FunctionAppsDev)
+## [Function Apps Dev](FunctionAppsDev/)
 - 
 
-## [Logic Apps Dev](/LogicAppDev)
+## [Logic Apps Dev](LogicAppDev/)
 - 
 
-## [Power BI Dev](/PowerBIDev)
+## [Power BI Dev](PowerBIDev/)
 - 
 
-## [SQL Dev](/SQLDev)
+## [SQL Dev](SQLDev/)
 - 
 
 
