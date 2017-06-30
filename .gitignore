@@ -256,3 +256,5 @@ paket-files/
 *.csproj
 DevSources/BotDev/UboneBot/UboneBot.csproj.user
 *.user
+*.sln
+*.sln
