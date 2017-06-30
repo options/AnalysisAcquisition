@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UboneBot", "UboneBot.csproj", "{8469FCFB-D955-4EE9-8D9C-2FB9FB903FE8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularWebDev", "..\..\AngularWebDev\AngularWebDev.csproj", "{4BB486E7-73DA-45DD-9A15-6EBC36A5E72D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8469FCFB-D955-4EE9-8D9C-2FB9FB903FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8469FCFB-D955-4EE9-8D9C-2FB9FB903FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8469FCFB-D955-4EE9-8D9C-2FB9FB903FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB486E7-73DA-45DD-9A15-6EBC36A5E72D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB486E7-73DA-45DD-9A15-6EBC36A5E72D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB486E7-73DA-45DD-9A15-6EBC36A5E72D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB486E7-73DA-45DD-9A15-6EBC36A5E72D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
