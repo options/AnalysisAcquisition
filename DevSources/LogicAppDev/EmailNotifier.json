@@ -1,0 +1,67 @@
+{
+    "$connections": {
+        "value": {
+            "outlook": {
+                "connectionId": "/subscriptions/cc8de771-4573-491e-beac-b656504ce601/resourceGroups/AnalysisAcquisition-rg/providers/Microsoft.Web/connections/outlook-3",
+                "connectionName": "outlook-3",
+                "id": "/subscriptions/cc8de771-4573-491e-beac-b656504ce601/providers/Microsoft.Web/locations/southeastasia/managedApis/outlook"
+            }
+        }
+    },
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "전자_메일_보내기": {
+                "inputs": {
+                    "body": {
+                        "Body": "@triggerBody()?['body']",
+                        "Subject": "@triggerBody()?['title']",
+                        "To": "@triggerBody()?['to']"
+                    },
+                    "host": {
+                        "api": {
+                            "runtimeUrl": "https://logic-apis-southeastasia.azure-apim.net/apim/outlook"
+                        },
+                        "connection": {
+                            "name": "@parameters('$connections')['outlook']['connectionId']"
+                        }
+                    },
+                    "method": "post",
+                    "path": "/Mail"
+                },
+                "runAfter": {},
+                "type": "ApiConnection"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "parameters": {
+            "$connections": {
+                "defaultValue": {},
+                "type": "Object"
+            }
+        },
+        "triggers": {
+            "manual": {
+                "inputs": {
+                    "schema": {
+                        "properties": {
+                            "body": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            },
+                            "to": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "kind": "Http",
+                "type": "Request"
+            }
+        }
+    }
+}
