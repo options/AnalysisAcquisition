@@ -2,7 +2,7 @@
 
 Repositories for Analysis on the Acquisition Process Hackfest
 
-## [Angular Front-end Dev](/AngularWebDev)
+## [Angular Front-end Dev](AngularWebDev/)
 
 - Sources for Web front-end UI that communicate with [Microsoft Bot App](https://dev.botframework.com/)
 - deveploed with modern web-techs like Angular 4, [TypeScript](https://www.typescriptlang.org/), Angular CLI, Bootstrap, etc.
