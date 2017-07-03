@@ -15,10 +15,20 @@ Front-end UI Architecture is as follows.
 
 ![Front-end UI Architecture](images/frontend-bot.png)
 
-## Development server
+## Test
 
+### Install Angular CLI if you need
+
+Both the CLI and generated project have dependencies that require Node 6.9.0 or higher, together with NPM 3 or higher. this is a [prerequisites](https://github.com/angular/angular-cli#prerequisites)
+
+How to install Angular cli
+
+> npm install -g @angular/cli
+
+### Configure Angular Web for localhost
 - Run `ng serve` for a dev server. 
 - Navigate to `http://localhost:4200/`. 
 - The app will automatically reload if you change any of the source files.
 - but, I'm not sure that Bot server is always available 
 
+![VS code](images/vscode.png)
