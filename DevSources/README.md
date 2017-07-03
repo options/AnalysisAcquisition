@@ -22,7 +22,13 @@ Repositories for Analysis on the Acquisition Process Hackfest
 - Bot simply rename it for preventing file-name duplicattion and forward it to Azure Blob storage for following analysis process
 
 ## [Function Apps Dev](FunctionAppsDev/)
-- 
+- Used Azure Functions feature for embracing elastic and reactive serverless hosting model.
+- [ConvertPdfToTextDocument](FunctionAppsDev/wwwroot/ConvertPdfToTextDocument) is for converting pdf file the customer uploaded into multiple image files(png format) per page and making up the document file from recognized result through cognitive services(Vision API, OCR) 
+ - [SendTextToTextAnalytics](FunctionAppsDev/wwwroot/SendTextToTextAnalytics) is in charge of transferring documentation [ConvertPdfToTextDocument](FunctionAppsDev/wwwroot/ConvertPdfToTextDocument) made up to Ubiqone TextAnalytics Service. 
+
+
+
+
 
 ## [Logic Apps Dev](LogicAppDev/)
 - 
