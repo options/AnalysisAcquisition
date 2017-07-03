@@ -24,33 +24,35 @@ The overall architecture is focusing on minimize operation and management cost a
 - Basically, It was configured to using *skype* and *telegram* channel and web site includes two of these. but *email* or *direct line* could be configured if needed.
 - *Uniqone Bot app* finally store uploaded file from bot channel into azure blob storage - *PDF Container* . Azure Queue Storage or Service Bus could be used in order to decrease cold start-up time of azure functions.
 
-### Backend: Opticla character recognition & Spell Checking to mitigate recognition error.
-- you can find out function app source code in [link](/DevSources/FunctionAppsDev)
+### Backend: Optical character recognition & Spell Checking to mitigate recognition error.
+- you can find out function app source code in [link](/DevSources/FunctionAppsDev).
 - As PDF File is stored in a specfic blob storage - *PDF Container*, azure function, [ConvertPdfToTextDocument](/DevSources/FunctionAppsDev/wwwroot/ConvertPdfToTextDocument) would be executed becaused blob storage was specified as triggering event.
 - This function converts a image pdf file into multiple image files(.png) per page, and recognize characters in the file using *Vision APIs* in *Cognitive Services*.
 - To mitigate OCR recognition error, *Bing Spell Check* service could be used if needed.
-- When The function stored composed documents into a specfic blob storage - *Text Container*. *SendTextToTextAnalytics* function would send document to *Uniqone Text Analytics Service*.
+- When the function stored composed documents into a specfic blob storage - *Text Container*, *SendTextToTextAnalytics* function would send document to *Uniqone Text Analytics Service*.
 
 This function is using **iTextSharp** nuget package to covert image pdf to multiple image files. you can see the more details of packages in this [link](https://www.nuget.org/packages/iTextSharp/). and a sample source code is [here](https://psycodedeveloper.wordpress.com/2013/01/10/how-to-extract-images-from-pdf-files-using-c-and-itextsharp/).*
 
 *Also, this function is using **Vision APIs** nuget package to using OCR in cognitive service. you can find out the more details are [here](https://www.nuget.org/packages/Microsoft.ProjectOxford.Vision).*
 
-*Azure function supports very easy way to utlize nuget packages using project.json files in azure function root folder. you can find out the how to use it in [project.json](\DevSources\FunctionAppsDev\wwwroot\ConvertPdfToTextDocument\project.json).*
+*Azure function supports very easy way to utlize nuget packages using project.json files in azure function root folder. you can find out the how to use it in [project.json](/DevSources/FunctionAppsDev/wwwroot/ConvertPdfToTextDocument/project.json).*
 
 ### Analytics: Acquisition information and risks.
--
--
-
-### Monitoring: Application Performance Monitoring.
--
--
+- *Ubiqone* and his partner already have a very unique analysis solution of acquisition information and the system have been hosting in different azure subscription. Basically, it is more reasonable to locate this service in the same region and the same resouce group. But, hackfest team decided to re-use on-going system rather than creation new one.
+- Additionally, Becuase Service endpoint could be changed and orginal data could be marshal according to which sub-system has to be integration, To isolate this expected change from others, [*SendTextToTextAnalytics*](/DevSources/FunctionAppsDev/wwwroot/SendTextToTextAnalytics) is responsible for sending data into Text Analytics Subsystem.
 
 ### Visualization: Visualization Analyzed Results.
--
--
+- Power BI is the most powerful tool to visualize the result. 
+- ..
+- ..
+
+### Monitoring: Application Performance Monitoring.
+- ..
+- ..
+
+![Dashboard](/images/dashboard1.png)
 
 
-# Projects Descriptions
 
 # Utilized Technologies
 Angular, ASP.NET Core, Bot Framework, App Service(Web App), Azure Functions, Azure Logic App, SQL Database, Power BI, etc.
