@@ -10,7 +10,8 @@ Repositories for Analysis on the Acquisition Process Hackfest
 - also included Web Chat Bot and Skype Web Chat Bot for communicating with Bot app
 
 ## [Azure Resource Group Dev](AzureResourceGroupDev/)
-- 
+- Azure resource template and parameter file for deploying Azure resources of Analysis Acquisition system.
+- Azure resource template files can be used for rebuilding their existing resources of current system or deploying a new Azure resources to customer's Azure environment.
 
 ## [Bot Dev](BotDev/)
 
