@@ -20,7 +20,7 @@ Architecture of Bot app communicating with Front-end is as follows.
 
 ### Download the Bot Framework Emulator
 
-Download packages for Mac, Windows, and Linux are available via the [GitHub releases page[(https://github.com/Microsoft/BotFramework-Emulator/releases). The latest Windows installer is available via the [emulator download page](https://emulator.botframework.com/) (download starts immediately).
+Download packages for Mac, Windows, and Linux are available via the [GitHub releases page](https://github.com/Microsoft/BotFramework-Emulator/releases). The latest Windows installer is available via the [emulator download page](https://emulator.botframework.com/) (download starts immediately).
 
 ### Connect and Test to a bot that is running on localhost
 
