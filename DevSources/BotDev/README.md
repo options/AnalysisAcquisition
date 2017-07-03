@@ -14,4 +14,4 @@ The Bot app is hosting on Azure Web App.
 
 Architecture of Bot app communicating with Front-end is as follows.
 
-![Front-end UI Architecture](images/frontend-bot.png)
+![Front-end UI Architecture](images/botapp.png)
