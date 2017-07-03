@@ -1,15 +1,18 @@
-# AnalysisAcquisition
+# Hackfest: Analysis Acquisition Solution with Ubiqone 
 
 This Project is that *gathering acquisition information* in globe and *analizing risk* of it to support optimize decision. 
 
-This Repository has a sample souce code to implment this kinds of application. The purpose of it is that explain how to utilize azure platform feature to simplify development and composing each of these features.
+This Repository has sample implemtation and the purpose of it is that to explain how to utilize azure platform features to simplify development and composing each of these features.
+
+You can download Powerpoint [silde]() and navigate slideshare [link]().
 
 # System Architecture
 
-The overall architecture is focusing on minimize operation and management cost and it has a few of edge-cutting architectural features. and it also using microsoft bot technologies in order to support multiple channels for the customer to send acquisition information into system.
+The overall architecture is focusing on minimize operation and management costs and it has a few of edge-cutting architectural features like microservices, serverless and others. and it also using microsoft bot technologies-bot framework and connector- in order to support multiple channels for the customer to upload acquisition information into system and azure functions and logic app was used in order to serverless hosting service. Additionally, PowerBI is used to see the analized result set.
+Last but least, Azure Monitor and Azure Application Insight are used to monitoring and what is going on the system and to find out the system failure and drill down the details under error situation.
 
 ![System Architecture](images/SystemArchitecture.png)
-*The Most of architectual features are carefully choiced to show and maximize azure platform pros. and cost effectiveness.*
+*The Most of architectual features are carefully selected to show and maximize azure platform pros. and cost effectiveness.*
 
 ## Architectual Consideration
 - Microservices
@@ -26,20 +29,20 @@ The overall architecture is focusing on minimize operation and management cost a
 
 ### Backend: Optical character recognition & Spell Checking to mitigate recognition error.
 - you can find out function app source code in [link](/DevSources/FunctionAppsDev).
-- As PDF File is stored in a specfic blob storage - *PDF Container*, azure function, [ConvertPdfToTextDocument](/DevSources/FunctionAppsDev/wwwroot/ConvertPdfToTextDocument) would be executed becaused blob storage was specified as triggering event.
-- This function converts a image pdf file into multiple image files(.png) per page, and recognize characters in the file using *Vision APIs* in *Cognitive Services*.
+- Whenever PDF File is stored in a specfic blob storage - *PDF Container*, azure function, [ConvertPdfToTextDocument](/DevSources/FunctionAppsDev/wwwroot/ConvertPdfToTextDocument) would be triggered because the blob storage was specified as triggering event.
+- This function is responsible for convering a image pdf file into multiple image files(.png) per page, and recognize characters from images using *Vision APIs* in *Cognitive Services*.
 - To mitigate OCR recognition error, *Bing Spell Check* service could be used if needed.
-- When the function stored composed documents into a specfic blob storage - *Text Container*, *SendTextToTextAnalytics* function would send document to *Uniqone Text Analytics Service*.
+- When the function stored recognized document into a specfic blob storage - *Text Container*, *SendTextToTextAnalytics* function would send document to *Uniqone Text Analytics Service*.
 
-*This function is using **iTextSharp** nuget package to covert image pdf to multiple image files. you can see the more details of packages in this [link](https://www.nuget.org/packages/iTextSharp/). and a sample source code is [here](https://psycodedeveloper.wordpress.com/2013/01/10/how-to-extract-images-from-pdf-files-using-c-and-itextsharp/).*
+*This function is using **iTextSharp** nuget package to covert image pdf to multiple image files. you can see the more details of the package in this [link](https://www.nuget.org/packages/iTextSharp/). and a sample source code is [here](https://psycodedeveloper.wordpress.com/2013/01/10/how-to-extract-images-from-pdf-files-using-c-and-itextsharp/).*
 
-*Also, this function is using **Vision APIs** nuget package to using OCR in cognitive service. you can find out the more details are [here](https://www.nuget.org/packages/Microsoft.ProjectOxford.Vision).*
+*Also, this function is using **Vision APIs** nuget package to use OCR in cognitive service. you can find out the more details [here](https://www.nuget.org/packages/Microsoft.ProjectOxford.Vision).*
 
 *Azure function supports very easy way to utlize nuget packages using project.json files in azure function root folder. you can find out the how to use it in [project.json](/DevSources/FunctionAppsDev/wwwroot/ConvertPdfToTextDocument/project.json).*
 
 ### Analytics: Acquisition information and risks.
-- *Ubiqone* and his partner already have a very unique analysis solution of acquisition information and the system have been hosting in different azure subscription as a single VM type. Basically, it is more reasonable to locate this service in the same region and the same resouce group. But, hackfest team decided to reuse on-going the system rather than to create new one.
-- Additionally, Becuase the service endpoint could be changed and orginal data could be marshaled according to which sub-system has to be integration, To isolate this expected change from others, [*SendTextToTextAnalytics*](/DevSources/FunctionAppsDev/wwwroot/SendTextToTextAnalytics) is developed and this function is responsible for sending data into Text Analytics Subsystem.
+- *Ubiqone* and his partner already have a very unique analysis solution of acquisition information and the system have been hosting in different azure subscription as a single VM type. Basically, it is more reasonable to locate this service in the same region and the same resouce group and confiure at least two of vms. But, hackfest team decided to reuse on-going the system rather than to create new one.
+- Additionally, Because the service endpoint could be changed and orginal data could be marshaled according to which sub-system has to be integration, To isolate this expected change from others, [*SendTextToTextAnalytics*](/DevSources/FunctionAppsDev/wwwroot/SendTextToTextAnalytics) was designed and this function is responsible for sending data into Text Analytics Subsystem.
 
 ### Notification
 - *Logic App* is generally used to design workflow with a lot of connectors. This sample application are using *Logic App* for email notification. and it exposes http triggering point to execute the logic app - [*EmailNotifier*](/DevSources/LogicAppDev). 
