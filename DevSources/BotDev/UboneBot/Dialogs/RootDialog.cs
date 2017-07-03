@@ -10,7 +10,7 @@ namespace UboneBot.Dialogs
     public class RootDialog : IDialog<object>
     {
         private const string PDFAttachOption = "PDF";
-        private const string DOCAttachOption = "DOC";
+        private const string HTMLAttachOption = "HTML";
 
         public async Task StartAsync(IDialogContext context)
         {
@@ -21,7 +21,7 @@ namespace UboneBot.Dialogs
         private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<object> result)
         {
             //this.ShowOptions(context);
-            PromptDialog.Choice(context, this.OnOptionSelected, new List<string>() { PDFAttachOption, DOCAttachOption }, @"어떤 문서를 등록하시겠습니까?", "선택해 주세요", 3);
+            PromptDialog.Choice(context, this.OnOptionSelected, new List<string>() { PDFAttachOption, HTMLAttachOption }, @"어떤 문서를 등록하시겠습니까?", "선택해 주세요", 3);
         }
 
         private async Task OnOptionSelected(IDialogContext context, IAwaitable<string> result)
@@ -35,7 +35,7 @@ namespace UboneBot.Dialogs
                     case PDFAttachOption:
                         context.Call(new PdfAttachDialog(), this.ResumeAfterOptionDialog);
                         break;
-                    case DOCAttachOption:
+                    case HTMLAttachOption:
                         context.Call(new EtcDialog(), this.ResumeAfterOptionDialog);
                         break;
                 }
