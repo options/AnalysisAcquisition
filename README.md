@@ -14,11 +14,11 @@ The overall architecture is focusing on minimize operation and management cost a
 - Loosely coupled
 - Asynchornous IO / Messaging 
 
-*The Most of architectual features is charefully choiced to show and maximize azure platform pros. and cost effectiveness.*
+*The Most of architectual features are carefully choiced to show and maximize azure platform pros. and cost effectiveness.*
 
 # System Architecture
 
-![System Architecture](/docs/SystemArchitecture.png)
+![System Architecture](C:\Users\myungkim\Documents\GitHub\AnalysisAcquisition\Docs\SystemArchitecture.png)
 
 ### FrontEnd: Ingestion Acquistion Information using multiple channels.
 - you can see web site source code in this [link](/DevSources/AngularWebDev), and bot app source code in this [link](/DevSources/BotDev).
