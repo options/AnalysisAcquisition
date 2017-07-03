@@ -26,12 +26,13 @@ Repositories for Analysis on the Acquisition Process Hackfest
 ## [Logic Apps Dev](LogicAppDev/)
 - 
 
-## [Power BI Dev](PowerBIDev/)
-- 
-
 ## [SQL Dev](SQLDev/)
-- 
+- Migrating schemas and data from Oracle database into Azure SQL Databases
+- Creating Stored procedures for retrieving and inserting data into Azure SQL databases
 
+## [Power BI Dev](PowerBIDev/)
+- Creating Power BI Reports based on inserted data to Azure SQL databases
+- Power BI report is connected to Azure SQL database using Direct Query and report is configured to refresh data on a regular basis
 
 ### Utilized Technologies
 > Angular, TypeScript, Bootstrap, ASP.NET Core, Bot Framework, App Service(Web App), Azure Functions, Azure Logic App, SQL Database, Power BI, etc.
