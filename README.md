@@ -31,15 +31,19 @@ The overall architecture is focusing on minimize operation and management cost a
 - To mitigate OCR recognition error, *Bing Spell Check* service could be used if needed.
 - When the function stored composed documents into a specfic blob storage - *Text Container*, *SendTextToTextAnalytics* function would send document to *Uniqone Text Analytics Service*.
 
-This function is using **iTextSharp** nuget package to covert image pdf to multiple image files. you can see the more details of packages in this [link](https://www.nuget.org/packages/iTextSharp/). and a sample source code is [here](https://psycodedeveloper.wordpress.com/2013/01/10/how-to-extract-images-from-pdf-files-using-c-and-itextsharp/).*
+*This function is using **iTextSharp** nuget package to covert image pdf to multiple image files. you can see the more details of packages in this [link](https://www.nuget.org/packages/iTextSharp/). and a sample source code is [here](https://psycodedeveloper.wordpress.com/2013/01/10/how-to-extract-images-from-pdf-files-using-c-and-itextsharp/).*
 
 *Also, this function is using **Vision APIs** nuget package to using OCR in cognitive service. you can find out the more details are [here](https://www.nuget.org/packages/Microsoft.ProjectOxford.Vision).*
 
 *Azure function supports very easy way to utlize nuget packages using project.json files in azure function root folder. you can find out the how to use it in [project.json](/DevSources/FunctionAppsDev/wwwroot/ConvertPdfToTextDocument/project.json).*
 
 ### Analytics: Acquisition information and risks.
-- *Ubiqone* and his partner already have a very unique analysis solution of acquisition information and the system have been hosting in different azure subscription. Basically, it is more reasonable to locate this service in the same region and the same resouce group. But, hackfest team decided to re-use on-going system rather than creation new one.
-- Additionally, Becuase Service endpoint could be changed and orginal data could be marshal according to which sub-system has to be integration, To isolate this expected change from others, [*SendTextToTextAnalytics*](/DevSources/FunctionAppsDev/wwwroot/SendTextToTextAnalytics) is responsible for sending data into Text Analytics Subsystem.
+- *Ubiqone* and his partner already have a very unique analysis solution of acquisition information and the system have been hosting in different azure subscription as a single VM type. Basically, it is more reasonable to locate this service in the same region and the same resouce group. But, hackfest team decided to reuse on-going the system rather than to create new one.
+- Additionally, Becuase the service endpoint could be changed and orginal data could be marshaled according to which sub-system has to be integration, To isolate this expected change from others, [*SendTextToTextAnalytics*](/DevSources/FunctionAppsDev/wwwroot/SendTextToTextAnalytics) is developed and this function is responsible for sending data into Text Analytics Subsystem.
+
+### Notification
+- *Logic App* is generally used to design workflow with a lot of connectors. This sample application are using *Logic App* for email notification. and it exposes http triggering point to execute the logic app - [*EmailNotifier*](/DevSources/LogicAppDev). 
+- The reason of why *Logic App* was choosed to implement this function is adding new notification channel likes SMS or integration with others is relatively easy.
 
 ### Visualization: Visualization Analyzed Results.
 - Power BI is the most powerful tool to visualize the result. 
