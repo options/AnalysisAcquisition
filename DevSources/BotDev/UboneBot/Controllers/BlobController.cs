@@ -13,7 +13,7 @@ namespace UboneBot.Controllers
     {
         public IEnumerable<BlockBlob> GetAllBlobs()
         {
-            Utils.Upload2ASS up = new Utils.Upload2ASS();
+            Utils.UbqoneBlobHelper up = new Utils.UbqoneBlobHelper();
             return up.ListBlobs();
         }
     }

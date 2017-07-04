@@ -145,7 +145,7 @@
     </Compile>
     <Compile Include="Model\BlockBlob.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\Upload2ASS.cs" />
+    <Compile Include="Utils\UbqoneBlobHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">

@@ -10,13 +10,13 @@ using UboneBot.Model;
 
 namespace UboneBot.Utils
 {
-    public class Upload2ASS
+    public class UbqoneBlobHelper
     {
         string containerName = "";
         string StorageConnectionString = string.Empty;
         CloudBlobContainer storageContainer;
 
-        public Upload2ASS()
+        public UbqoneBlobHelper()
         {
             // 저장소 연결 문자열 가져오기
             StorageConnectionString = CloudConfigurationManager.GetSetting("StorageConnectionString");
