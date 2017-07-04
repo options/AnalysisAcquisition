@@ -10,7 +10,7 @@ export class BlobService {
 
   getBlobs(): Observable<IBlob[]> {
     //console.log("getblob called");
-    return this.http.get('http://localhost:3978/api/blob')
+    return this.http.get('/api/blob')
       .map((response:Response) => {
         return <IBlob[]>response.json()
       })
