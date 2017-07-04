@@ -13,9 +13,17 @@ export class DefaultComponent implements OnInit {
   constructor(private blobSvc: BlobService) { }
 
   ngOnInit() {
+    this.loadBlobList();
+  }
+
+  loadBlobList() : void {
     this.blobSvc.getBlobs().subscribe( blobs => {
-        this.blobs = blobs;
+      this.blobs = blobs;
     });
+  }
+
+  clickRefresh() : void {
+    this.loadBlobList();
   }
 
 }
