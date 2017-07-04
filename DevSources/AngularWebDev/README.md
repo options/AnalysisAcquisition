@@ -8,8 +8,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - deveploed with modern web-techs like Angular 4, [TypeScript](https://www.typescriptlang.org/), Angular CLI, Bootstrap, etc.
 - included Power BI Embedded UI for analysis report
 - also included Web Chat Bot and Skype Web Chat Bot for communicating with Bot app
+- it communicates with Azure Storage for loading list of blob that have uploaded by Bot
 
-The Bot app is hosting on Azure Web App.
+Angular Web App and Bot app is hosting on Azure Web App.
 
 Front-end UI Architecture is as follows.
 
