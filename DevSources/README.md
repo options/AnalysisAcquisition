@@ -8,6 +8,7 @@ Repositories for Analysis on the Acquisition Process Hackfest
 - deveploed with modern web-techs like Angular 4, [TypeScript](https://www.typescriptlang.org/), Angular CLI, Bootstrap, etc.
 - included Power BI Embedded UI for analysis report
 - also included Web Chat Bot and Skype Web Chat Bot for communicating with Bot app
+- It fetches list of blob that have uploaded by Bot from the Azure storage using [RxJs](https://github.com/ReactiveX/rxjs)
 
 ## [Azure Resource Group Dev](AzureResourceGroupDev/)
 - Azure resource template and parameter file for deploying Azure resources of Analysis Acquisition system.
