@@ -22,13 +22,13 @@ These are snapshots of front-end web ui.
 > Main page with Skype Web chat
 > ![Home](images/ui-home.png)   
 > 
-> Chat bot page 
+> Chat bot page   
 > ![Home](images/ui-bot.png)
 >
-> Power BI emebedded UI 
+> Power BI emebedded UI   
 > ![Home](images/ui-bi.png)
 >
-> page for blob list uploaded   
+> page for blob list uploaded     
 > ![Home](images/ui-blob.png)
 
 ## Test
