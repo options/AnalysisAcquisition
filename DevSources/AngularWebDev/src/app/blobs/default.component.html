@@ -14,6 +14,9 @@
       <td><a href="{{blob.uri}}">{{blob.name}}</a></td>
       <td>{{blob.contentLength}} bytes</td>
     </tr>
+    <tr *ngIf="!loaded">
+      <td colspan="2">Loading ...</td>
+    </tr>
   </tbody>
 </table>
 </div>

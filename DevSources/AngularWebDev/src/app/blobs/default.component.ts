@@ -9,7 +9,8 @@ import { BlobService } from "app/shared/blob.service";
 })
 export class DefaultComponent implements OnInit {
   blobs : IBlob[]
-  
+  loaded : boolean = false;
+
   constructor(private blobSvc: BlobService) { }
 
   ngOnInit() {
@@ -17,8 +18,10 @@ export class DefaultComponent implements OnInit {
   }
 
   loadBlobList() : void {
+    this.loaded = false;
     this.blobSvc.getBlobs().subscribe( blobs => {
       this.blobs = blobs;
+      this.loaded = true;
     });
   }
 
