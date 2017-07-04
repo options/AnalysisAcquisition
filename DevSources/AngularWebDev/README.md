@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - deveploed with modern web-techs like Angular 4, [TypeScript](https://www.typescriptlang.org/), Angular CLI, Bootstrap, etc.
 - included Power BI Embedded UI for analysis report
 - also included Web Chat Bot and Skype Web Chat Bot for communicating with Bot app
-- It fetches list of blob that have uploaded by Bot from the Azure storage using [RxJs](https://github.com/ReactiveX/rxjs) 
+- It fetches list of blob that have uploaded by Bot from the Azure storage using @angular/http and  [RxJs](https://github.com/ReactiveX/rxjs) 
 
 Angular Web App and Bot app is hosting on Azure Web App.
 
