@@ -9,7 +9,7 @@ You can download Powerpoint [silde]() and navigate slideshare [link]().
 # System Architecture
 
 The overall architecture is focusing on minimize operation and management costs and embracing a few of edge-cutting architectural features like microservices, serverless, reactive and others. And This System is using Microsoft bot technologies-*bot framework* and *connector*- to support multiple channels for the customers to upload acquisition information into system and *azure functions* and *logic app* are used to serverless hosting. Additionally, *PowerBI* is used to see the analyzed result set.
-Last but least, Azure Monitor and Azure Application Insight are used to monitoring and what is going on the system and to find out the system failure and drill down the details under error situation.
+Last but least, *Azure Monitor* and *Azure Application Insight* are used to monitoring and what is going on the system and to find out the system failure and drill down the details under error situation.
 
 ![System Architecture](images/SystemArchitecture.png)
 *The Most of architectural features are carefully selected to show and maximize azure platform pros. and cost effectiveness.*
@@ -25,7 +25,24 @@ Last but least, Azure Monitor and Azure Application Insight are used to monitori
 ### FrontEnd: Ingestion Acquistion Information using multiple channels.
 - You can see web site source code in this [link](/DevSources/AngularWebDev), and bot app source code in this [link](/DevSources/BotDev).
 - Basically, it was configured to using *skype* and *telegram* channel and web site includes two of these. but *email* or *direct line* could be configured if needed.
-- *Uniqone Bot app* finally store uploaded file from bot channel into azure blob storage - *PDF Container*. Azure Queue Storage or Service Bus could be used to decrease cold start-up time of azure functions.
+- *Uniqone Bot app* finally store uploaded file from bot channel into azure blob storage - *PDF Container*. *Azure Queue Storage* or *Service Bus* could be used to decrease cold start-up time of azure functions.
+
+#### Web site 
+
+![WebSite](/images/frontend-bot.png )
+
+- Basically, This web site was developed for the customer to upload the pdf files to system. However, this web site also shows a few of modern client side application development technologies - Angular 4, Angular CLI, TypeScript, Bootstrap and others.  
+- Additionally, It could be a good sample if developers want to embed *Skype Web Chat* and *Web Chat*. 
+- It also includes *PowerBI Embedded* to show analyzed result report in customers web site rather than *PowerBI* site or *PowerBI Desktop*.
+
+#### Demo
+- File Upload Demo
+![websitedemo](/images/website_demo.gif)
+
+#### Bot app
+
+
+
 
 ### Backend: Optical character recognition & Spell Checking to mitigate recognition error.
 - You can find out function app source code in [link](/DevSources/FunctionAppsDev).
@@ -41,12 +58,12 @@ Last but least, Azure Monitor and Azure Application Insight are used to monitori
 *Azure function supports very easy way to utilize nuget packages using project.json files in azure function root folder. you can find out the how to use it in [project.json](/DevSources/FunctionAppsDev/wwwroot/ConvertPdfToTextDocument/project.json).*
 
 ### Analytics: Acquisition information and risks.
-- *Ubiqone* and his partner already have a very unique analysis solution of acquisition information and the system have been hosting in different azure subscription as a single VM type. Basically, it is more reasonable to locate this service in the same region and the same resouce group and confiure at least two of vms. But, hackfest team decided to reuse on-going the system rather than to create new one.
-- Additionally, Because the service endpoint could be changed and orginal data could be marshaled according to which sub-system has to be integration, To isolate this expected change from others, [*SendTextToTextAnalytics*](/DevSources/FunctionAppsDev/wwwroot/SendTextToTextAnalytics) was designed and this function is responsible for sending data into Text Analytics Subsystem.
+- *Ubiqone* and his partner already have an unique analysis solution of acquisition information and the system have been hosting in different azure subscription as a single VM type. Basically, it is more reasonable to locate this service in the same region and the same resource group and configure at least two of VMs. But, hackfest team decided to reuse on-going the system rather than to create new one.
+- Additionally, Because the service endpoint could be changed and original data could be marshaled according to which sub-system has to be integration, To isolate this expected change from others, [*SendTextToTextAnalytics*](/DevSources/FunctionAppsDev/wwwroot/SendTextToTextAnalytics) was designed and this function is responsible for sending data into Text Analytics Subsystem.
 
 ### Notification
 - *Logic App* is generally used to design workflow with a lot of connectors. This sample application are using *Logic App* for email notification. and it exposes http triggering point to execute the logic app - [*EmailNotifier*](/DevSources/LogicAppDev). 
-- The reason of why *Logic App* was choosed to implement this function is adding new notification channel likes SMS or integration with others is relatively easy.
+- The reason of why *Logic App* was chosen to implement this function is adding new notification channel likes SMS or integration with others is relatively easy.
 
 ### Visualization: Visualization Analyzed Results.
 - Power BI is the most powerful tool to visualize the result. 
