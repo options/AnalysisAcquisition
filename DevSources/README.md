@@ -27,12 +27,9 @@ Repositories for Analysis on the Acquisition Process Hackfest
 - [ConvertPdfToTextDocument](FunctionAppsDev/wwwroot/ConvertPdfToTextDocument) is for converting pdf file the customer uploaded into multiple image files(png format) per page and making up the document file from recognized result through cognitive services(Vision API, OCR) 
  - [SendTextToTextAnalytics](FunctionAppsDev/wwwroot/SendTextToTextAnalytics) is in charge of transferring documentation [ConvertPdfToTextDocument](FunctionAppsDev/wwwroot/ConvertPdfToTextDocument) made up to Ubiqone TextAnalytics Service. 
 
-
-
-
-
 ## [Logic Apps Dev](LogicAppDev/)
-- 
+- Used Logic App feature to send email to the customers, becuase of easily update notification method or integration other system, Logic App was utilized. 
+- Becuase Logic App support http triggering and json sample reversing feature, It is very easy to reveal http endpoint for integration other system.
 
 ## [SQL Dev](SQLDev/)
 - Migrating schemas and data from Oracle database into Azure SQL Databases
