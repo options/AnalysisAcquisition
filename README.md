@@ -8,11 +8,11 @@ You can download Powerpoint [silde]() and navigate slideshare [link]().
 
 # System Architecture
 
-The overall architecture is focusing on minimize operation and management costs and it has a few of edge-cutting architectural features like microservices, serverless and others. and it also using microsoft bot technologies-bot framework and connector- in order to support multiple channels for the customer to upload acquisition information into system and azure functions and logic app was used in order to serverless hosting service. Additionally, PowerBI is used to see the analized result set.
+The overall architecture is focusing on minimize operation and management costs and embracing a few of edge-cutting architectural features like microservices, serverless, reactive and others. And This System is using Microsoft bot technologies-*bot framework* and *connector*- to support multiple channels for the customers to upload acquisition information into system and *azure functions* and *logic app* are used to serverless hosting. Additionally, *PowerBI* is used to see the analyzed result set.
 Last but least, Azure Monitor and Azure Application Insight are used to monitoring and what is going on the system and to find out the system failure and drill down the details under error situation.
 
 ![System Architecture](images/SystemArchitecture.png)
-*The Most of architectual features are carefully selected to show and maximize azure platform pros. and cost effectiveness.*
+*The Most of architectural features are carefully selected to show and maximize azure platform pros. and cost effectiveness.*
 
 ## Architectual Consideration
 - Microservices
@@ -24,21 +24,21 @@ Last but least, Azure Monitor and Azure Application Insight are used to monitori
 
 ### FrontEnd: Ingestion Acquistion Information using multiple channels.
 - You can see web site source code in this [link](/DevSources/AngularWebDev), and bot app source code in this [link](/DevSources/BotDev).
-- Basically, It was configured to using *skype* and *telegram* channel and web site includes two of these. but *email* or *direct line* could be configured if needed.
-- *Uniqone Bot app* finally store uploaded file from bot channel into azure blob storage - *PDF Container* . Azure Queue Storage or Service Bus could be used in order to decrease cold start-up time of azure functions.
+- Basically, it was configured to using *skype* and *telegram* channel and web site includes two of these. but *email* or *direct line* could be configured if needed.
+- *Uniqone Bot app* finally store uploaded file from bot channel into azure blob storage - *PDF Container*. Azure Queue Storage or Service Bus could be used to decrease cold start-up time of azure functions.
 
 ### Backend: Optical character recognition & Spell Checking to mitigate recognition error.
-- you can find out function app source code in [link](/DevSources/FunctionAppsDev).
-- Whenever PDF File is stored in a specfic blob storage - *PDF Container*, azure function, [ConvertPdfToTextDocument](/DevSources/FunctionAppsDev/wwwroot/ConvertPdfToTextDocument) would be triggered because the blob storage was specified as triggering event.
-- This function is responsible for convering a image pdf file into multiple image files(.png) per page, and recognize characters from images using *Vision APIs* in *Cognitive Services*.
+- You can find out function app source code in [link](/DevSources/FunctionAppsDev).
+- Whenever PDF File is stored in a specific blob storage - *PDF Container*, azure function, [ConvertPdfToTextDocument](/DevSources/FunctionAppsDev/wwwroot/ConvertPdfToTextDocument) would be triggered because the blob storage was specified as triggering event.
+- This function is responsible for converting a image pdf file into multiple image files(.png) per page, and recognize characters from images using *Vision APIs* in *Cognitive Services*.
 - To mitigate OCR recognition error, *Bing Spell Check* service could be used if needed.
-- When the function stored recognized document into a specfic blob storage - *Text Container*, *SendTextToTextAnalytics* function would send document to *Uniqone Text Analytics Service*.
+- When the function stored recognized document into a specific blob storage - *Text Container*, *SendTextToTextAnalytics* function would send document to *Uniqone Text Analytics Service*.
 
 *This function is using **iTextSharp** nuget package to covert image pdf to multiple image files. you can see the more details of the package in this [link](https://www.nuget.org/packages/iTextSharp/). and a sample source code is [here](https://psycodedeveloper.wordpress.com/2013/01/10/how-to-extract-images-from-pdf-files-using-c-and-itextsharp/).*
 
 *Also, this function is using **Vision APIs** nuget package to use OCR in cognitive service. you can find out the more details [here](https://www.nuget.org/packages/Microsoft.ProjectOxford.Vision).*
 
-*Azure function supports very easy way to utlize nuget packages using project.json files in azure function root folder. you can find out the how to use it in [project.json](/DevSources/FunctionAppsDev/wwwroot/ConvertPdfToTextDocument/project.json).*
+*Azure function supports very easy way to utilize nuget packages using project.json files in azure function root folder. you can find out the how to use it in [project.json](/DevSources/FunctionAppsDev/wwwroot/ConvertPdfToTextDocument/project.json).*
 
 ### Analytics: Acquisition information and risks.
 - *Ubiqone* and his partner already have a very unique analysis solution of acquisition information and the system have been hosting in different azure subscription as a single VM type. Basically, it is more reasonable to locate this service in the same region and the same resouce group and confiure at least two of vms. But, hackfest team decided to reuse on-going the system rather than to create new one.
@@ -62,5 +62,5 @@ Last but least, Azure Monitor and Azure Application Insight are used to monitori
 
 
 # Utilized Technologies
-Angular, ASP.NET Core, Bot Framework, App Service(Web App), Azure Functions, Azure Logic App, SQL Database, Power BI, etc.
+Angular, ASP.NET Core, Bot Framework, App Service(Web App), Azure Functions, Azure Logic App, SQL Database, Power-BI, etc.
 
