@@ -71,9 +71,13 @@ Last but least, *Azure Monitor* and *Azure Application Insight* are used to moni
 ### Visualization: Visualization Analyzed Results.
 
 ![PowerBI Demo](/images/powerbi_demo.gif)
-- Power BI is the most powerful tool to visualize the result. 
-- ..
-- ..
+- *Power BI* is the most powerful tool to visualize the result. 
+- Whenever the Analaytics process was done, The customer would received email and link to access result report.
+- Each of entities are anaytics result even it is not enough currently, However, The customer would be able to easily add new entities using *Power BI Desktop Application*
+- Time frequency?(지용 Help) 
+- Direct Query ? (지용 Help)
+- 
+
 
 ### Monitoring: Application Performance Monitoring.
 - ..
