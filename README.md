@@ -69,6 +69,8 @@ Last but least, *Azure Monitor* and *Azure Application Insight* are used to moni
 - The reason of why *Logic App* was chosen to implement this function is adding new notification channel likes SMS or integration with others is relatively easy.
 
 ### Visualization: Visualization Analyzed Results.
+
+![PowerBI Demo](/images/powerbi_demo.gif)
 - Power BI is the most powerful tool to visualize the result. 
 - ..
 - ..
