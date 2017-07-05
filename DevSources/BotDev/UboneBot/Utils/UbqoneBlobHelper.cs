@@ -6,20 +6,20 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
+using UboneBot.Model;
 
 namespace UboneBot.Utils
 {
-    public class Upload2ASS
+    public class UbqoneBlobHelper
     {
         string containerName = "";
         string StorageConnectionString = string.Empty;
         CloudBlobContainer storageContainer;
 
-        public Upload2ASS()
+        public UbqoneBlobHelper()
         {
             // 저장소 연결 문자열 가져오기
             StorageConnectionString = CloudConfigurationManager.GetSetting("StorageConnectionString");
-
             containerName = CloudConfigurationManager.GetSetting("ContainerName");
 
             // 저장소 계정 가져오기
@@ -39,6 +39,35 @@ namespace UboneBot.Utils
             blockBlob.UploadFromStream(stream);
 
             return blockBlob.StorageUri.PrimaryUri;
+        }
+
+        public List<BlockBlob> ListBlobs()
+        {
+            BlockBlob blob;
+            List<BlockBlob> blobs = new List<BlockBlob>();
+
+            // Loop over items within the container and output the length and URI.
+            foreach (IListBlobItem item in storageContainer.ListBlobs(null, false))
+            {
+                if (item.GetType() == typeof(CloudBlockBlob))
+                {
+                    CloudBlockBlob cloudBlob = (CloudBlockBlob)item;
+                    //Console.WriteLine("Block blob of length {0}: {1}", blob.Properties.Length, blob.Name);
+                    blob = new BlockBlob
+                    {
+                        Name = cloudBlob.Name,
+                        Uri = cloudBlob.Uri.ToString(),
+                        ContentLength = cloudBlob.Properties.Length
+                    };
+                    blobs.Add(blob);
+                }
+                else if (item.GetType() == typeof(CloudPageBlob))
+                {
+                    // do somethig 
+                }
+            }
+
+            return blobs;
         }
     }
 }

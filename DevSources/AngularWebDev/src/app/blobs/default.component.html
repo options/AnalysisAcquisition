@@ -1,0 +1,22 @@
+  <div class="col-md-8" style="margin-bottom: 5px">
+      <button class="btn-success" (click)="clickRefresh()">refresh</button>
+  </div>
+  <div class="col-md-8">
+  <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let blob of blobs">
+      <td><a href="{{blob.uri}}">{{blob.name}}</a></td>
+      <td>{{blob.contentLength}} bytes</td>
+    </tr>
+    <tr *ngIf="!loaded">
+      <td colspan="2">Loading ...</td>
+    </tr>
+  </tbody>
+</table>
+</div>

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace UboneBot
 {
@@ -23,6 +24,9 @@ namespace UboneBot
             };
 
             // Web API configuration and services
+            
+            // Other configuration omitted
+            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
 
             // Web API routes
             config.MapHttpAttributeRoutes();
@@ -33,5 +37,6 @@ namespace UboneBot
                 defaults: new { id = RouteParameter.Optional }
             );
         }
+
     }
 }

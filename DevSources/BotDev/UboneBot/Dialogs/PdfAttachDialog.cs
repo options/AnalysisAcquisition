@@ -59,7 +59,7 @@ namespace UboneBot.Dialogs
 
                     await context.PostAsync("문서를 업로드 하고 있습니다...");
 
-                    Utils.Upload2ASS up = new Utils.Upload2ASS();
+                    Utils.UbqoneBlobHelper up = new Utils.UbqoneBlobHelper();
                     Uri fileUri = up.UploadFilesToAzureStorage(fileName, contentStream);
 
                     await context.PostAsync("업로드가 완료 되었습니다. \n" +
