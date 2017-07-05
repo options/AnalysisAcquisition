@@ -29,20 +29,23 @@ Last but least, *Azure Monitor* and *Azure Application Insight* are used to moni
 
 #### Web site 
 
-![WebSite](/images/frontend-bot.png )
+![WebSite](/images/frontend-bot.png)
 
-- Basically, This web site was developed for the customer to upload the pdf files to system. However, this web site also shows a few of modern client side application development technologies - Angular 4, Angular CLI, TypeScript, Bootstrap and others.  
+- Basically, This web site was developed to present UI surface for the customers would be able to upload pdf file. However, this web site also shows a few of modern client side application development technologies - Angular 4, Angular CLI, TypeScript, Bootstrap and others.  
 - Additionally, It could be a good sample if developers want to embed *Skype Web Chat* and *Web Chat*. 
 - It also includes *PowerBI Embedded* to show analyzed result report in customers web site rather than *PowerBI* site or *PowerBI Desktop*.
 
+*you can find out more details in [here](https://github.com/options/AnalysisAcquisition/tree/master/DevSources/AngularWebDev).*
 #### File upload demo
 
 ![websitedemo](/images/website_demo.gif)
 
 #### Bot app
 
+- Ubiqone bot app was developed to guide the customers to upload pdf file, correctly and manipulate the file name as appropriate form to store *azure storage*. Because a few of characters in file name are not allowed in *azure storage* and append GUID value to avoid from duplication.r
+- Basically, The scenario doesn't required a complex communication flow. However, it utilized bot framework dialog based communication because of revealing the way to use it.
 
-
+*you can find out more details in [here](https://github.com/options/AnalysisAcquisition/tree/master/DevSources/BotDev).*
 
 ### Backend: Optical character recognition & Spell Checking to mitigate recognition error.
 - You can find out function app source code in [link](/DevSources/FunctionAppsDev).
