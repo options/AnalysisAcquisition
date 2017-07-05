@@ -35,8 +35,8 @@ Last but least, *Azure Monitor* and *Azure Application Insight* are used to moni
 - Additionally, It could be a good sample if developers want to embed *Skype Web Chat* and *Web Chat*. 
 - It also includes *PowerBI Embedded* to show analyzed result report in customers web site rather than *PowerBI* site or *PowerBI Desktop*.
 
-#### Demo
-- File Upload Demo
+#### File upload demo
+
 ![websitedemo](/images/website_demo.gif)
 
 #### Bot app
