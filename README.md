@@ -71,13 +71,10 @@ Last but least, *Azure Monitor* and *Azure Application Insight* are used to moni
 ### Visualization: Visualization Analyzed Results.
 
 ![PowerBI Demo](/images/powerbi_demo.gif)
-- *Power BI* is the most powerful tool to visualize the result. 
-- Whenever the Analaytics process was done, The customer would received email and link to access result report.
-- Each of entities are anaytics result even it is not enough currently, However, The customer would be able to easily add new entities using *Power BI Desktop Application*
-- Time frequency?(지용 Help) 
-- Direct Query ? (지용 Help)
-- 
-
+- *Power BI* is the most powerful self-service BI tool to enable you to create the visualized reports. *Ubqone* uses Power BI report to provide the analyzed data by Ubqone Analytics solution.
+- Whenever the Analaytics process was done, *Ubqone Analytics solution* stores the analyzed data into Azure SQL Databases and sends an email with link to Power BI report to business user. Business user or customer can check the newly analyzed data through clicking links of email.
+- You can check the sample reports from [here](DevSources/PowerBIDev/PROD). Each of entities are anaytics result even it is not enough currently, However, The customer would be able to easily add new entities using *Power BI Desktop Application*.
+- Usually, Power BI report imports a copy of data set from data source and refresh data on a regular basis. But, Ubqone Analytics solution needs to present data on the fly. So, Power BI reports need to connect to data source directly. Power BI provides DirectQuery feature to meet this requirement. DirectQuery will connect to data source, query the recent data and present to user. Plus, Power BI dataset can be refreshed on a regular basis(from 15 minutes to weekly). Ubqone uses this auto refresh feature to provide dashboard feature.
 
 ### Monitoring: Application Performance Monitoring.
 - ..
