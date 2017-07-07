@@ -97,7 +97,7 @@ Last but least, *Azure Monitor* and *Azure Application Insight* are used to moni
 ## Date
 
 - May 31 : Hackfest Planning
-- July 24: Hackfest Develop scenario, Architect Discussion 
+- July 24: Hackfest scenario decision, Architect discussion 
 - June 27 ~ July 3, 2017 : Hackfest
 
 ## People and Roles
