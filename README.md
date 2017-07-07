@@ -116,7 +116,7 @@ Last but least, *Azure Monitor* and *Azure Application Insight* are used to moni
 
 ## Briefing Session
 
-- You can download briefing powerpoint [slide](/Docs/ubiqone_hackfest.pptx) and watch [video](https://youtu.be/rDxPETzSAIU).
+- You can download briefing powerpoint [slide](/Docs/ubiqone_hackfest.pptx) and watch [video](https://www.youtube.com/watch?v=LNcDj-rO9ug).
 
 ![ubiqone1](/images/ubiqone1.jpg)
 ![ubiqone3](/images/ubiqone3.jpg)
