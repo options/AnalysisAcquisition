@@ -4,7 +4,8 @@ This Project is that *gathering acquisition information* in globe and *analizing
 
 This Repository has sample implemtation and the purpose of it is that to explain how to utilize azure platform features to simplify development and composing each of these features.
 
-You can download Powerpoint [silde]() and navigate slideshare [link]().
+You can download Powerpoint [silde](/Docs/ubiqone_hackfest.pptx).
+
 
 # System Architecture
 
@@ -25,7 +26,7 @@ Last but least, *Azure Monitor* and *Azure Application Insight* are used to moni
 ### FrontEnd: Ingestion Acquistion Information using multiple channels.
 - You can see web site source code in this [link](/DevSources/AngularWebDev), and bot app source code in this [link](/DevSources/BotDev).
 - Basically, it was configured to using *skype* and *telegram* channel and web site includes two of these. but *email* or *direct line* could be configured if needed.
-- *Uniqone Bot app* finally store uploaded file from bot channel into azure blob storage - *PDF Container*. *Azure Queue Storage* or *Service Bus* could be used to decrease cold start-up time of azure functions.
+- *Ubiqone Bot app* finally store uploaded file from bot channel into azure blob storage - *PDF Container*. *Azure Queue Storage* or *Service Bus* could be used to decrease cold start-up time of azure functions.
 
 #### Web site 
 
@@ -52,7 +53,7 @@ Last but least, *Azure Monitor* and *Azure Application Insight* are used to moni
 - Whenever PDF File is stored in a specific blob storage - *PDF Container*, azure function, [ConvertPdfToTextDocument](/DevSources/FunctionAppsDev/wwwroot/ConvertPdfToTextDocument) would be triggered because the blob storage was specified as triggering event.
 - This function is responsible for converting a image pdf file into multiple image files(.png) per page, and recognize characters from images using *Vision APIs* in *Cognitive Services*.
 - To mitigate OCR recognition error, *Bing Spell Check* service could be used if needed.
-- When the function stored recognized document into a specific blob storage - *Text Container*, *SendTextToTextAnalytics* function would send document to *Uniqone Text Analytics Service*.
+- When the function stored recognized document into a specific blob storage - *Text Container*, *SendTextToTextAnalytics* function would send document to *Ubiqone Text Analytics Service*.
 
 *This function is using **iTextSharp** nuget package to covert image pdf to multiple image files. you can see the more details of the package in this [link](https://www.nuget.org/packages/iTextSharp/). and a sample source code is [here](https://psycodedeveloper.wordpress.com/2013/01/10/how-to-extract-images-from-pdf-files-using-c-and-itextsharp/).*
 
@@ -79,13 +80,43 @@ Last but least, *Azure Monitor* and *Azure Application Insight* are used to moni
 ![](/images/powerbi.png)
 
 ### Monitoring: Application Performance Monitoring.
-- ..
-- ..
+- This project utilized *Application Insights* for gathering telemetry informations from each of substems. *Azure WebApp* and *Azure function* basically has very easy way to integrate with it. you can see [Set up Application Insights for your ASP.NET website](https://docs.microsoft.com/en-us/azure/application-insights/app-insights-asp-net) and [Azure Functions now has direct integration with Application Insights](https://blogs.msdn.microsoft.com/appserviceteam/2017/04/06/azure-functions-application-insights/) documents
+- Azure Dashboard customization features help the customers to compose various diagnostics information they want to watch. and it could be shared with other developers and others.
 
 ![Dashboard](/images/dashboard1.png)
 
+## Utilized Key Technologies
+- `Web App(SPA)` : Angular 4, BootStrap, TypeScript, ASP.NET, Azure App Service
+- `Bot App` : ASP.NET, Bot Framework
+- `Backend` : Cognitive Services, Vision API, iTextSharp, Azure Functions, Logic App
+- `Text Analtyics` : Java, Spring
+- `Visualization` : SQL Database, PowerBI
 
+# Appendix
 
-# Utilized Technologies
-Angular, ASP.NET Core, Bot Framework, App Service(Web App), Azure Functions, Azure Logic App, SQL Database, Power-BI, etc.
+## Date
 
+- May 31 : Hackfest Planning
+- July 24: Hackfest Develop scenario, Architect Discussion 
+- June 27 ~ July 3, 2017 : Hackfest
+
+## People and Roles
+
+### Ubiqone 
+
+- `Peter LEE` : Business Scenario, Architecting, Text Analtyics
+- `Sang Ik KIM` : Text Analtyics
+- `Mi Jin LEE` : Text Analtics, Database, Integration with other subsystem
+
+### Microsoft
+
+- `Tae Young KIM` : Architecting, Frontend Web App, Bot App, Application Insight
+- `Myung Shin KIM` : Architecting, Backend Azure function, Logic App, Application Insight, Azure Monitor
+- `Ji Young SEONG` : Hackfest Mentoring, Architecting, Database Design/Migration, Power BI
+
+## Briefing Session
+
+- You can download briefing powerpoint [slide](/Docs/ubiqone_hackfest.pptx) and watch [video](https://youtu.be/rDxPETzSAIU).
+
+![ubiqone1](/images/ubiqone1.jpg)
+![ubiqone3](/images/ubiqone3.jpg)
