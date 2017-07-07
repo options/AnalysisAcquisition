@@ -89,7 +89,7 @@ Last but least, *Azure Monitor* and *Azure Application Insight* are used to moni
 - `Web App(SPA)` : Angular 4, BootStrap, TypeScript, ASP.NET, Azure App Service
 - `Bot App` : ASP.NET, Bot Framework
 - `Backend` : Cognitive Services, Vision API, iTextSharp, Azure Functions, Logic App
-- `Text Analtyics` : Java, Spring
+- `Text Analtyics` : Java, Spring, Azure VM
 - `Visualization` : SQL Database, PowerBI
 
 # Appendix
