@@ -4,11 +4,12 @@
 
 This project was generated with Microsoft Bot Framework, C# and ASP.NET.
 
-- Sources for Bot app(UBone Bot)
+this technical soltion tried to integrate Azure Bot Service with ASP.NET WEB API for reducing maintanence process that customer concerned. Because they didn't want to maintain bot server and web server sepreately.  
 - developed with [Microsoft Bot framework](https://dev.botframework.com/) using C#, ASP.NET
 - used multi-dialogs for conversation flow
 - User can send/upload a document file(PDF only now) to Bot for asking analysis
 - Bot simply rename it for preventing file-name duplicattion and forward it to Azure Blob storage for following analysis process
+- this app also support Web API service for retreiving several server-side information like a list of blobs from the Azure storage
 
 The Bot app is hosting on Azure Web App.
 
